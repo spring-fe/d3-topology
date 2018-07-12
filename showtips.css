@@ -13,6 +13,7 @@
 #show-tips h6{
 	text-align: center;
 	margin: 8px 0 0;
+	font-weight: 500;
 }
 #show-tips ul{
 	margin: 8px 6px 10px;
@@ -64,6 +65,7 @@
 	border-color: #75e375;
 	outline: none;
 	border-width: 1px;
+	box-shadow: 1px 1px 2px #75e375;
 }
 #show-tips li span i{
 	display: none;
@@ -95,4 +97,11 @@
 	width: 0;
 	height: 0;
 	visibility: hidden;
+}
+a{
+	text-decoration: underline;
+	color: #0066cc;
+}
+a:hover{
+	color: #2e8ff0;
 }

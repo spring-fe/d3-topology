@@ -8,7 +8,8 @@
 ///Width and height
 var w = $("#topology_container").width();
 var h = $("#topology_container").height();
-var isFirstLoad = true;
+var isFirstLoad = true,
+	dataset, alarms;
 
 //Original data
 var dataset = {
@@ -155,7 +156,7 @@ var dataset = {
 					contact:'1',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 				
@@ -170,7 +171,7 @@ var dataset = {
 					contact:'2',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"baidu.com",
                     traffic:''//流量信息
 				},
 				{
@@ -178,7 +179,7 @@ var dataset = {
 					contact:'3',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 			]
@@ -192,7 +193,7 @@ var dataset = {
 					contact:'4',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 			]
@@ -206,7 +207,7 @@ var dataset = {
 					contact:'5',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -214,7 +215,7 @@ var dataset = {
 					contact:'6',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 			]
@@ -228,7 +229,7 @@ var dataset = {
 					contact:'7',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -236,7 +237,7 @@ var dataset = {
 					contact:'8',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -244,7 +245,7 @@ var dataset = {
 					contact:'9',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 			]
@@ -258,7 +259,7 @@ var dataset = {
 					contact:'10',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -266,7 +267,7 @@ var dataset = {
 					contact:'11',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -274,7 +275,7 @@ var dataset = {
 					contact:'12',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -282,7 +283,7 @@ var dataset = {
 					contact:'13',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 			]
@@ -296,7 +297,7 @@ var dataset = {
 					contact:'14',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 			]
@@ -310,7 +311,7 @@ var dataset = {
 					contact:'15',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 				
@@ -325,7 +326,7 @@ var dataset = {
 					contact:'16',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 			]
@@ -339,7 +340,7 @@ var dataset = {
 					contact:'17',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 				
@@ -354,7 +355,7 @@ var dataset = {
 					contact:'18',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -362,7 +363,7 @@ var dataset = {
 					contact:'19',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -370,7 +371,7 @@ var dataset = {
 					contact:'20',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -378,7 +379,7 @@ var dataset = {
 					contact:'21',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 				
@@ -393,7 +394,7 @@ var dataset = {
 					contact:'22',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				},
 				{
@@ -401,7 +402,7 @@ var dataset = {
 					contact:'23',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 			]
@@ -415,7 +416,7 @@ var dataset = {
 					contact:'24',//联系信息
                     local_point:"ip:'',name:''",
                     remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
+                    url:"https://www.baidu.com/",
                     traffic:''//流量信息
 				}
 			]
@@ -431,25 +432,27 @@ function Topology(){
 			normal: 'green',
 			high: 'yellow'
 		}
+	};
+	this.tipInfo = {
+		type:'',//line or node
+		data:{}
 	}
 }
 
 Topology.prototype.draw = function(){
 	var self = this;
 	/*$.ajax({
-		url:'http://10.138.77.242:8360/topology/to_json/',
+		url:'',
 		method: 'get'
     }).done(function(data){
     	dataset = data;
-    	
-    	
+    	//self.getAlarm();//获取告警
+
     })*/
-   self.initForce();
+    self.initForce();//初始布局
     self.createElem();//创建元素
     Topology.bindEvent.apply(self);//事件绑定
 };
-
-
 
 Topology.prototype.initForce = function(){
 	var self = this;
@@ -548,6 +551,23 @@ Topology.prototype.closeAlarm = function(){
 	$("#alarm").css("display","none");
 }
 
+Topology.prototype.getAlarm = function(){
+	$.ajax({
+		url:'',
+		method: 'get'
+    }).done(function(data){
+    	alarms = data.alarms;
+
+    	var alarmUl = $("#alarm").find("ul"),
+    	liList = '';
+
+    	$.each(alarms,function(index, value){
+    		liList = liList + '<li>' + value + '</li>';
+    	})
+    	alarmUl.html(liList);
+    })
+}
+
 Topology.prototype.zoom = d3.behavior.zoom()
 	.scaleExtent([0.1,10])
 	.on("zoom",function(){
@@ -603,13 +623,15 @@ Topology.prototype.getOffset = function(d,elem,space){
 
 //eventpos为鼠标在浏览器页面的位置,offset为鼠标位置到弹框的距离
 Topology.prototype.getTipPos = function(eventpos,offset){
-	
 	var docScrollTop = $(document).scrollTop(),
 	    docScrollLeft = $(document).scrollLeft(),
+
 	    visibleHeight = $(window).height(),
 	    visibleWidth = $(window).width(),
+
 	    tipWidth = $("#show-tips").width(),
 	    tipHeight = $("#show-tips").height(),
+
 	    left = eventpos.x - docScrollLeft + offset,
 	    top = eventpos.y - docScrollTop- offset;
 
@@ -625,7 +647,7 @@ Topology.prototype.getTipPos = function(eventpos,offset){
 }
 
 //展示提示框
-Topology.prototype.toShowTip = function(data,eventpos,type){
+Topology.prototype.toShowTip = function(eventpos){
 	Topology.hideTip();
 
     var tip = $("#show-tips"),
@@ -633,22 +655,32 @@ Topology.prototype.toShowTip = function(data,eventpos,type){
 	title = tip.find("h6"),
 	tipPos;
 
-	if(type == 'node'){
+	if(self.tipInfo.type == 'node'){
 		title.text("节点信息");
 	}else{
 		title.text("连线信息");
 	}
-	for(name in data){
-		var value;
-		if(name == 'url'){
-			value = '<a target="_blank" href="'+data[name]+'">360公司官网</a>';
-		}else{
-			value = data[name];
+
+	for(name in self.tipInfo.data){
+		var isHasNewName, value, $li;
+
+		value = self.tipInfo.data[name];
+		$li = $("<li><label class=wd-break>"+name+":</label><span class=wd-break>"+value+"</span></li>");
+
+		if(self.tipInfo.type == 'node' && name == "new_name" || self.tipInfo.type == 'node' &&  name == "desc" || self.tipInfo.type == 'line' && name == 'contact'){
+				$li.append("<input type='text'/>");
+				$li.find("span").append('<i></i>');
+			}
+		tipList.append($li);
+		if(name == 'new_name'){
+			isHasNewName = true;
 		}
-		var li = "<li><label class=wd-break>"+name+":</label><span class=wd-break>"+value+"<i></i></span><input type='text'/></li>";
-		
-		tipList.append(li);
 	}
+
+	if(!isHasNewName){
+		tipList.prepend("<li><label class=wd-break>new_name:</label><span class=wd-break>name123<i></i></span><input type='text'/></li>")
+	}
+	
 
 	tipPos = this.getTipPos(eventpos, 10);
 	tip.css({"left":tipPos.left,"top":tipPos.top});
@@ -656,6 +688,21 @@ Topology.prototype.toShowTip = function(data,eventpos,type){
 	Topology.showTip();
 };
 
+Topology.prototype.setTipInfo = function(type,data){
+	var self = this;
+	
+	if(data == undefined){
+		data = type;
+		type = '';
+	}
+	
+	if(type){
+		self.tipInfo.type = type;
+	}
+
+	self.tipInfo.data = data;
+	
+}
 
 //给路径添加一条或多条线
 Topology.prototype.addLines = function(pathG,d){
@@ -724,13 +771,44 @@ Topology.prototype.stopTick = function(n){
 	this.force.stop();
 };
 
+//编辑信息
+Topology.prototype.editTipInfo = function(jqElem){
+	var text = jqElem.val(),
+		label = jqElem.prev().prev().text(),
+		label = label.substring(0,label.length - 1),
+		orgParam = {};
+
+		orgParam[label] = text;
+
+		orgParam.type = self.tipInfo.type;
+
+		for(var key in self.tipInfo.data){
+			if(key != label){
+				if(key == "ip" || key == "hostname"){
+					orgParam[key] = self.tipInfo.data[key];
+				}
+			}
+		}
+
+		$.ajax({
+			url: '//',
+			method:'POST',
+			data:JSON.stringify(orgParam)
+		}).done(function(){
+
+		})
+		
+		console.log(orgParam)
+	
+}
+
 //更新拓扑图数据
 Topology.prototype.refresh = function(self){
 	var defer = $.Deferred();
 
-	setTimeout(function(){
-		toRefresh();
-	},1000);
+	setInterval(function(){
+		//toRefresh();
+	},60000);
 
 	function toRefresh(){
 		var promise = updateData();
@@ -739,84 +817,19 @@ Topology.prototype.refresh = function(self){
 
 	function updateData(){
 		/*$.ajax({
-			url:'http://10.138.77.242:8360/topology/to_json/',
+			url:'',
 			method: 'get'
     	}).done(function(data){
     		dataset = data;
     		self.force.links(dataset.paths)
     		defer.resolve();
     	});*/
-		var nodeLen = dataset.nodes.length;
-		var pathsLen = dataset.paths.length;
-
-    	var newNode = {
- 			node_id:10,
-			type:"switchDevice",
-			name:"switchDevice",
-			x:200,
-			y:700,
-			fixed:true,
-			info:{//节点详细信息
-				hostname:'',
-				ip:'10.1.1.1',
-				desc:'description'
-			}
-		};
-		dataset.nodes.push(newNode);
-
-		dataset.paths[pathsLen-1].lines = [
-			{
-				traffic_status:"normal",
-				contact:'',//联系信息
-                local_point:"ip:'',name:''",
-                remote_point:"ip:'',name:''",
-                traffic:''//流量信息
-			},
-			{
-				traffic_status:"normal",
-				contact:'',//联系信息
-                local_point:"ip:'',name:''",
-                remote_point:"ip:'',name:''",
-                traffic:''//流量信息
-			},
-			{
-				traffic_status:"normal",
-				contact:'',//联系信息
-                local_point:"ip:'',name:''",
-                remote_point:"ip:'',name:''",
-                traffic:''//流量信息
-			},
-			{
-				traffic_status:"normal",
-				contact:'',//联系信息
-                local_point:"ip:'',name:''",
-                remote_point:"ip:'',name:''",
-                traffic:''//流量信息
-			}
-		]
-		dataset.paths.push({
-			source: 10, 
-			target: 1, 
-			lines:[
-				{
-					traffic_status:"normal",
-					contact:'1',//联系信息
-                    local_point:"ip:'',name:''",
-                    remote_point:"ip:'',name:''",
-                    url:"http://www.360.com/",
-                    traffic:''//流量信息
-				}
-				
-			]
-		})
-		setTimeout(function(){
-			defer.resolve();
-		},1000)
 
     	return defer.promise();
 	}
 
 	function updateTopo(){
+		//self.getAlarm();
 		self.force
 		.links(dataset.paths)
 		.nodes(dataset.nodes);
@@ -824,15 +837,14 @@ Topology.prototype.refresh = function(self){
 		self.link.remove();
 
 		self.link = self.linkContainer.selectAll(".link")
-    		.data(dataset.paths)
-    		.enter()
-    		.append("g")
-    		.attr("class","link")
-    		.each(function(d){
-    			self.addLines(d3.select(this),d);
-    		});
+    	.data(dataset.paths)
+    	.enter()
+    	.append("g")
+    	.attr("class","link")
+    	.each(function(d){
+    		self.addLines(d3.select(this),d);
+    	});
     	
-    	//self.link.exit().remove;
     	
     	self.node.remove();
     	self.node = self.nodeContainer.selectAll(".node")
@@ -850,21 +862,32 @@ Topology.prototype.refresh = function(self){
 
 //事件绑定
 Topology.bindEvent = function(){
-	var selfColor,elem,lineData,linePos,nodeInfo,
+	var selfColor,elem,lineData,linePos,nodeInfo
 		self = this;
+
+	//处理input没有focus情况
+    function hideInput(){
+    	$("#show-tips").find("input").each(function(){
+    		if($(this).css("display") != "none"){
+    			$(this).css("display","none").prev().css("display","inline-block");
+    		}
+    	})
+    }
 
 	d3.select("#line_container")
 	.on("click",function(){
 		d3.event.stopPropagation();
 		linePos = elem.attr("data-pos").split('_')[2];
-		lineData = elem.datum().lines[linePos];
 
 		//相对于浏览器页面的坐标
 		var point = {
     		x:d3.event.pageX,
     		y:d3.event.pageY
     	}
-    	self.toShowTip(lineData,point,'line');
+
+    	self.setTipInfo("line", elem.datum().lines[linePos]);
+
+    	self.toShowTip(point);
 	})
 	.on("mouseover",function(){
 		elem = d3.select(d3.event.target);
@@ -882,13 +905,14 @@ Topology.bindEvent = function(){
 		if(d3.event.defaultPrevented) return;
 		d3.event.stopPropagation();
 
-		nodeInfo = d3.select(d3.event.target).datum().info;
     	var point = {
     		x:d3.event.pageX,
     		y:d3.event.pageY
     	}
 
-    	self.toShowTip(nodeInfo,point,'node');
+    	self.setTipInfo("node", d3.select(d3.event.target).datum().info);
+
+    	self.toShowTip(point);
     });
 
 	$("#network-topology").click(function(){
@@ -902,37 +926,34 @@ Topology.bindEvent = function(){
     })
     .on("click","#status",function(){
     	var statusElem = $(this);
-    	if(statusElem.html() == "收起告警"){
+
+    	if(statusElem.html().indexOf("收起告警") != -1){
     		$("#alarm #content").slideUp(function(){
-    			statusElem.html("展开告警");
+    			statusElem.html("展开告警&nbsp;");
     			$("#alarm").animate({width:'100px'});
     		});
     	}else{
     		$("#alarm").animate({width:'500px'},function(){
     			$("#alarm #content").slideDown(function(){
-    				statusElem.html("收起告警");
+    				statusElem.html("收起告警&nbsp;");
     			});
     		});
     	}
     });
 
-    //处理input没有focus情况
-    function hideInput(){
-    	$("#show-tips").find("input").each(function(){
-    		if($(this).css("display") != "none"){
-    			$(this).css("display","none").prev().css("display","inline-block");
-    		}
-    	})
-    }
     $("#show-tips").on("click",".close",function(){
     	Topology.hideTip();
     }).on("click","i",function(e){
     	e.stopPropagation();
+
     	hideInput();
-    	$(this).closest('span').css("display","none").next().css("display","inline-block");
+    	var text = $(this).closest('span').text();
+    	$(this).closest('span').css("display","none").next().css("display","inline-block").val(text);
+
     }).on("blur","input",function(){
     	//update function
     	//get data
+    	self.editTipInfo($(this));
     	$(this).css("display","none").prev().css("display","inline-block");
     }).on("click", "input",function(e){
     	e.stopPropagation();
@@ -947,6 +968,7 @@ Topology.bindEvent = function(){
 //展示提示框,工具函数
 Topology.showTip = function(){
 	var display = $("#show-tips").css("display");
+
 	if(display == "none"){
 		$("#show-tips").css("display","block");
 	}
@@ -954,6 +976,7 @@ Topology.showTip = function(){
 //隐藏提示框且提示框内容置空
 Topology.hideTip = function(){
 	var display = $("#show-tips").css("display");
+
 	if(display == "block"){
 		$("#show-tips")
 		.css("display","none")
